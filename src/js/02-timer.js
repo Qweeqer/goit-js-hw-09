@@ -2,7 +2,10 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
+// const TIMER_DEADLINE = selectedDates[0];
+const timerRef = document.querySelector('.timer');
 const startBtn = document.querySelector('[data-start]');
+
 const daysRef = document.querySelector('[data-days]');
 const hoursRef = document.querySelector('[data-hours]');
 const minutesRef = document.querySelector('[data-minutes]');
@@ -10,22 +13,35 @@ const secondsRef = document.querySelector('[data-seconds]');
 let timerId = null;
 
 startBtn.setAttribute('disabled', true);
-
-function convertMs(ms) {
-  const second = 1000;
-  const minute = second * 60;
-  const hour = minute * 60;
-  const day = hour * 24;
-
-const days = Math.floor(ms / day);
-const hours = Math.floor((ms % day) / hour);
-const minutes = Math.floor(((ms % day) % hour) / minute);
-const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+// const timer = {
+//     timerId: null,
+//     start(rootSelector, deadLine) {
+//         let delta = deadLine - Date.now();
+//         if (delta <= 0) {
+//         Notify.failure('Please choose a date in the future');
+//         return;
+//         }
+//         this.timerId = setInterval(() => {
+//             now = Date.now();
+//             let delta = deadLine - Date.now();
+//             if (delta <= 0) {
+//                 Notify.success('Time is over');
+//                 clearInterval(this.timerId);
+//                 return;
+//             }
+//         });
+//     }
+// }
+function convertMs(diff) {
+const days = Math.floor(diff / 1000 / 60 / 60  / 24);
+const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
+const minutes = Math.floor(diff / 1000 / 60) % 60;
+const seconds = Math.floor(diff / 1000) % 60;
 
   return { days, hours, minutes, seconds };
 }
 
-const addLeadingZero = value => String(value).padStart(2, '0');
+const addLeadingZero = value => String(value).padStart(2, 0);
 
 const options = {
   enableTime: true,
@@ -40,30 +56,27 @@ const options = {
     startBtn.removeAttribute('disabled');
 
     const showTimer = () => {
-        const now = new Date();
-        
+      const now = new Date();
       localStorage.setItem('selectedData', selectedDates[0]);
       const selectData = new Date(localStorage.getItem('selectedData'));
 
-        if (!selectData) return;
-        
-        const diff = selectData - now;
-        if (diff <= 0) {
-      clearInterval(timerId);
-    }
+      if (!selectData) return;
+
+      const diff = selectData - now;
       const { days, hours, minutes, seconds } = convertMs(diff);
       daysRef.textContent = days;
       hoursRef.textContent = addLeadingZero(hours);
       minutesRef.textContent = addLeadingZero(minutes);
       secondsRef.textContent = addLeadingZero(seconds);
 
-    //     if (
-    //     daysRef.textContent === '00' &&
-    //     hoursRef.textContent === '00' &&
-    //     minutesRef.textContent === '00' &&
-    //     secondsRef.textContent === '00'
-    //   )
-    //       clearInterval(timerId);
+      if (
+        daysRef.textContent === '0' &&
+        hoursRef.textContent === '00' &&
+        minutesRef.textContent === '00' &&
+        secondsRef.textContent === '00'
+      ) {
+        clearInterval(timerId);
+      }
     };
 
     const onClick = () => {
