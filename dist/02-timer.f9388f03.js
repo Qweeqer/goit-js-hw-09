@@ -549,12 +549,19 @@ const options = {
             const selectData = new Date(localStorage.getItem("selectedData"));
             if (!selectData) return;
             const diff = selectData - now;
+            if (diff <= 0) clearInterval(timerId);
             const { days , hours , minutes , seconds  } = convertMs(diff);
             daysRef.textContent = days;
             hoursRef.textContent = addLeadingZero(hours);
             minutesRef.textContent = addLeadingZero(minutes);
             secondsRef.textContent = addLeadingZero(seconds);
-            if (daysRef.textContent === "00" && hoursRef.textContent === "00" && minutesRef.textContent === "00" && secondsRef.textContent === "00") clearInterval(timerId);
+        //     if (
+        //     daysRef.textContent === '00' &&
+        //     hoursRef.textContent === '00' &&
+        //     minutesRef.textContent === '00' &&
+        //     secondsRef.textContent === '00'
+        //   )
+        //       clearInterval(timerId);
         };
         const onClick = ()=>{
             if (timerId) clearInterval(timerId);
