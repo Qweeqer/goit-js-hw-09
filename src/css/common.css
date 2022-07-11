@@ -28,10 +28,16 @@ display: flex;
     border: 2px solid #504c4c;
     color: white;
     margin-top: 20px;
-    width: 80px;
+    width: 100px;
     height: 50px;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(to bottom, #569ff7, #569ff7);
+      border-radius: 5px;
+      text-shadow: -1px -1px 0 #959ea9;
+      background: #569ff7;
+      text-transform: uppercase;
+      border: 1px solid #959ea9;
 }
 .flipper {
  color: #333;
