@@ -30,7 +30,6 @@ const options = {
         btnStartRef.disabled = false;
     },
 };
-
 flatpickr("#datetime-picker", options);
 
 let object = {};
@@ -63,8 +62,6 @@ function onChangeContent({ days, hours, minutes, seconds }) {
     spanMinutesf.textContent = minutes;
     spanSecondsRef.textContent = seconds;
 }
-
-
 function convertMs(ms) {
     const second = 1000;
     const minute = second * 60;
@@ -77,8 +74,8 @@ function convertMs(ms) {
     const seconds = Math.floor((((ms % day) % hour) % minute) / second);
     return { days, hours, minutes, seconds };
 }
-
 btnStartRef.addEventListener("click", onCountTime);
+
 
 
 // ----------------------Чернетка-------------------------------------------------------------

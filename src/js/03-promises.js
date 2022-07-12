@@ -1,49 +1,43 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
-// Получаем ссылку на форму (чтобы повесить слушателя)
+// Отримуємо посилання на форму для додавання слухача
 const formRef = document.querySelector('.form');
-
-// Функция для создания промиса, принимает два параметра: номер создаваемого промиса (position) и задержку (delay)
+// Функція для створення проміса, приймає два параметри: номер створеного проміса (position) та затримку (delay)
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const shouldResolve = Math.random() > 0.3;
       if (shouldResolve) {
-        resolve({ position, delay })
+        resolve(onSuccess)
       } else {
-        reject({ position, delay })
+        reject(onError)
       }
     }, delay);
   });
 };
-  
-// Функция-колбек вызываемая при событии submit
+// Функція-колбек (виклик при натісканні submit)
 function onSubmit(event) {
   event.preventDefault();
-  const form = event.currentTarget;
-  const dataForm = new FormData(form);
-  const finalData = {};
+  // const form = event.currentTarget;
+  const dataForm = new FormData(formRef);
   for (const [key, value] of dataForm.entries()) {
-    finalData[key] = Number(value);
+    dataForm[key] = Number(value);
   }
-  // очищаем форму
-  form.reset();
-  // в цикле for вызываем функцию создающую промис
-  for (let position = 1; position <= finalData.amount; position += 1){
-    createPromise(position, finalData.delay).then(onSuccess).catch(onError);
-    finalData.delay = finalData.delay + finalData.step;
+  // Очищення форми
+  formRef.reset();
+  // В циклі for викликаемо функцію яка створює проміс
+  for (let position = 1; position <= dataForm.amount; position += 1) {
+    createPromise(position, dataForm.delay).then(onSuccess).catch(onError);
+    dataForm.delay += dataForm.step;
+    console.log(dataForm);
   };
 };
-
-// Функция вызываемая методом catch, когда промис возвращает reject
+// Функція викликається: для метода catch, коли проміс повертає reject
 function onError({ position, delay }) {
   Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
 };
-
-// Функция вызываемая методом then, когда промис возвращает resolve
+// Функція викликається: для метода then, коли проміс повертає resolve
 function onSuccess({ position, delay }) {
   Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
 };
-
-// Вешаем слушателя на форму по событию submit
+// Додаємо слухача на форму при натисканні submit
 formRef.addEventListener('submit', onSubmit);

@@ -504,48 +504,42 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"8tzFL":[function(require,module,exports) {
 var _notiflixNotifyAio = require("notiflix/build/notiflix-notify-aio");
-// Получаем ссылку на форму (чтобы повесить слушателя)
+// Отримуємо посилання на форму для додавання слухача
 const formRef = document.querySelector(".form");
-// Функция для создания промиса, принимает два параметра: номер создаваемого промиса (position) и задержку (delay)
+// Функція для створення проміса, приймає два параметри: номер створеного проміса (position) та затримку (delay)
 function createPromise(position, delay) {
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             const shouldResolve = Math.random() > 0.3;
-            if (shouldResolve) resolve({
-                position,
-                delay
-            });
-            else reject({
-                position,
-                delay
-            });
+            if (shouldResolve) resolve(onSuccess);
+            else reject(onError);
         }, delay);
     });
 }
-// Функция-колбек вызываемая при событии submit
+// Функція-колбек (виклик при натісканні submit)
 function onSubmit(event) {
     event.preventDefault();
-    const form = event.currentTarget;
-    const dataForm = new FormData(form);
-    const finalData = {};
-    for (const [key, value] of dataForm.entries())finalData[key] = Number(value);
-    // очищаем форму
-    form.reset();
-    // в цикле for вызываем функцию создающую промис
-    for(let position = 1; position <= finalData.amount; position += 1){
-        createPromise(position, finalData.delay).then(onSuccess).catch(onError);
-        finalData.delay = finalData.delay + finalData.step;
+    // const form = event.currentTarget;
+    const dataForm = new FormData(formRef);
+    for (const [key, value] of dataForm.entries())dataForm[key] = Number(value);
+    // Очищення форми
+    formRef.reset();
+    // В циклі for викликаемо функцію яка створює проміс
+    for(let position = 1; position <= dataForm.amount; position += 1){
+        createPromise(position, dataForm.delay).then(onSuccess).catch(onError);
+        dataForm.delay += dataForm.step;
+        console.log(dataForm);
     }
 }
-// Функция вызываемая методом catch, когда промис возвращает reject
+// Функція викликається: для метода catch, коли проміс повертає reject
 function onError({ position , delay  }) {
     (0, _notiflixNotifyAio.Notify).failure(`❌ Rejected promise ${position} in ${delay}ms`);
 }
-// Функция вызываемая методом then, когда промис возвращает resolve
+// Функція викликається: для метода then, коли проміс повертає resolve
 function onSuccess({ position , delay  }) {
     (0, _notiflixNotifyAio.Notify).success(`✅ Fulfilled promise ${position} in ${delay}ms`);
 }
-// Вешаем слушателя на форму по событию submit
+// Додаємо слухача на форму при натисканні submit
 formRef.addEventListener("submit", onSubmit);
 
 },{"notiflix/build/notiflix-notify-aio":"eXQLZ"}],"eXQLZ":[function(require,module,exports) {
