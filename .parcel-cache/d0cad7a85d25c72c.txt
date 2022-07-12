@@ -30,7 +30,7 @@
 45D:\GitHub\goit-js-hw-09\node_modules\csso\lib133017413683185672 1
 37D:\GitHub\goit-js-hw-09\.editorconfig133014118693587831 0
 35D:\GitHub\goit-js-hw-09\.posthtmlrc133014118693627858 0
-28D:\GitHub\goit-js-hw-09\dist133021083117960185 1
+28D:\GitHub\goit-js-hw-09\dist133021247234226417 1
 66D:\GitHub\goit-js-hw-09\node_modules\posthtml-include\package.json133017413469962910 0
 99D:\GitHub\goit-js-hw-09\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-web\package.json133017413653485787 0
 68D:\GitHub\goit-js-hw-09\node_modules\svgo\plugins\removeEmptyText.js133017413688799425 0
@@ -140,7 +140,7 @@
 53D:\GitHub\goit-js-hw-09\node_modules\msgpackr-extract133017413546284014 1
 98D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-react-refresh-wrap\src\helpers\helpers.js133017413488195157 0
 67D:\GitHub\goit-js-hw-09\node_modules\@jridgewell\source-map\LICENSE133017413423671912 0
-45D:\GitHub\goit-js-hw-09\src\js\03-promises.js133021083664167198 0
+45D:\GitHub\goit-js-hw-09\src\js\03-promises.js133021247229505370 0
 71D:\GitHub\goit-js-hw-09\node_modules\type-fest\source\package-json.d.ts133017413658749311 0
 68D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\regions\AX.js133017413686417825 0
 66D:\GitHub\goit-js-hw-09\node_modules\terser\lib\compress\inline.js133017413675700661 0
@@ -182,7 +182,7 @@
 43D:\GitHub\goit-js-hw-09\node_modules\@types133017413314488818 1
 63D:\GitHub\goit-js-hw-09\node_modules\svgo\plugins\reusePaths.js133017413709013009 0
 71D:\GitHub\goit-js-hw-09\node_modules\posthtml-match-helper\package.json133017413431867416 0
-42D:\GitHub\goit-js-hw-09\src\js\02-timer.js133021041814050200 0
+42D:\GitHub\goit-js-hw-09\src\js\02-timer.js133021245266146399 0
 64D:\GitHub\goit-js-hw-09\node_modules\weak-lru-cache\package.json133017413568238816 0
 58D:\GitHub\goit-js-hw-09\node_modules\ansi-styles\readme.md133017413487694822 0
 42D:\GitHub\goit-js-hw-09\src\css\common.css133021030446949743 0
@@ -1627,7 +1627,7 @@
 61D:\GitHub\goit-js-hw-09\node_modules\simplelightbox\README.md133017413756424701 0
 65D:\GitHub\goit-js-hw-09\node_modules\nth-check\lib\compile.js.map133017413628679173 0
 85D:\GitHub\goit-js-hw-09\node_modules\electron-to-chromium\full-chromium-versions.json133017413620313584 0
-42D:\GitHub\goit-js-hw-09\dist\02-timer.html133021076415237702 0
+42D:\GitHub\goit-js-hw-09\dist\02-timer.html133021240151557503 0
 74D:\GitHub\goit-js-hw-09\node_modules\flatpickr\dist\esm\utils\polyfills.js133019569813867543 0
 82D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\insert-adjacent.js133017413891084858 0
 88D:\GitHub\goit-js-hw-09\node_modules\posthtml\node_modules\posthtml-parser\dist\index.js133017413473034967 0
@@ -1821,7 +1821,7 @@
 68D:\GitHub\goit-js-hw-09\node_modules\posthtml-match-helper\readme.md133017413459215755 0
 57D:\GitHub\goit-js-hw-09\node_modules\posthtml-include\lib133017413432297693 1
 61D:\GitHub\goit-js-hw-09\node_modules\posthtml-include\LICENSE133017413410483099 0
-58D:\GitHub\goit-js-hw-09\dist\goit-js-hw-09.59712999.js.map133021076416038248 0
+58D:\GitHub\goit-js-hw-09\dist\goit-js-hw-09.59712999.js.map133021240150546897 0
 87D:\GitHub\goit-js-hw-09\node_modules\posthtml-include\node_modules\posthtml-parser\dist133017413582318140 1
 70D:\GitHub\goit-js-hw-09\node_modules\@swc\helpers\lib\_create_super.js133017413671457814 0
 86D:\GitHub\goit-js-hw-09\node_modules\flatpickr\dist\plugins\confirmDate\confirmDate.js133019569806501677 0
@@ -1989,7 +1989,7 @@
 62D:\GitHub\goit-js-hw-09\node_modules\flatpickr\dist\l10n\is.js133019569811027283 0
 93D:\GitHub\goit-js-hw-09\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV2\files133017413682315083 1
 83D:\GitHub\goit-js-hw-09\node_modules\notiflix\dist\notiflix-report-aio-3.2.5.min.js133017413656898072 0
-49D:\GitHub\goit-js-hw-09\dist\02-timer.f9388f03.js133021076415898143 0
+49D:\GitHub\goit-js-hw-09\dist\02-timer.f9388f03.js133021245271524164 0
 99D:\GitHub\goit-js-hw-09\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV2\files\embed133017413701948228 1
 84D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\namevalue-storage.js133017413895697947 0
 106D:\GitHub\goit-js-hw-09\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV2\files\embed\embed2133017413702778784 1
@@ -2451,7 +2451,7 @@
 96D:\GitHub\goit-js-hw-09\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_drop.1133017413649262960 0
 55D:\GitHub\goit-js-hw-09\node_modules\is-extglob\LICENSE133017413466870829 0
 70D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\eot.js133017413873413066 0
-53D:\GitHub\goit-js-hw-09\dist\02-timer.f9388f03.js.map133021076416078274 0
+53D:\GitHub\goit-js-hw-09\dist\02-timer.f9388f03.js.map133021245271836686 0
 96D:\GitHub\goit-js-hw-09\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_dump.1133017413653505795 0
 58D:\GitHub\goit-js-hw-09\node_modules\get-port\package.json133017413412994769 0
 78D:\GitHub\goit-js-hw-09\node_modules\@swc\helpers\src\_class_name_tdz_error.js133017413747558771 0
@@ -3272,7 +3272,7 @@
 73D:\GitHub\goit-js-hw-09\node_modules\css-what\lib\commonjs\parse.d.ts.map133017413635904022 0
 85D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\unhandledrejection.js133017413906665392 0
 77D:\GitHub\goit-js-hw-09\node_modules\css-what\lib\commonjs\stringify.d.ts.map133017413638765938 0
-52D:\GitHub\goit-js-hw-09\dist\03-promises.cd58c9ff.js133021083117803870 0
+52D:\GitHub\goit-js-hw-09\dist\03-promises.cd58c9ff.js133021247233986251 0
 73D:\GitHub\goit-js-hw-09\node_modules\css-what\lib\commonjs\types.d.ts.map133017413642868673 0
 66D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\src133017413648092171 1
 74D:\GitHub\goit-js-hw-09\node_modules\@parcel\cache\src\IDBCache.browser.js133017413538648891 0
@@ -3685,7 +3685,7 @@
 68D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\regions\LV.js133017413893676593 0
 68D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\regions\MC.js133017413894036863 0
 68D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\regions\MD.js133017413894076861 0
-51D:\GitHub\goit-js-hw-09\dist\index.101ee4ef.css.map133021076416298410 0
+51D:\GitHub\goit-js-hw-09\dist\index.101ee4ef.css.map133021240147965117 0
 70D:\GitHub\goit-js-hw-09\node_modules\@jridgewell\source-map\dist\types133017413627248221 1
 68D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\regions\MH.js133017413894577196 0
 68D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\regions\ML.js133017413894727297 0
@@ -3793,7 +3793,7 @@
 78D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\canvas-text.js133017413725053709 0
 71D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\colr.js133017413750660853 0
 62D:\GitHub\goit-js-hw-09\node_modules\@swc\helpers\package.json133017413417567820 0
-51D:\GitHub\goit-js-hw-09\dist\01-color-switcher.html133021076415217694 0
+51D:\GitHub\goit-js-hw-09\dist\01-color-switcher.html133021240151557503 0
 90D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\comparedocumentposition.js133017413750840968 0
 111D:\GitHub\goit-js-hw-09\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias\main.js133017413693492567 0
 79D:\GitHub\goit-js-hw-09\node_modules\caniuse-lite\data\features\console-time.js133017413751111143 0
@@ -4351,7 +4351,7 @@
 68D:\GitHub\goit-js-hw-09\node_modules\@parcel\watcher\src\Debounce.hh133017413648712586 0
 67D:\GitHub\goit-js-hw-09\node_modules\@parcel\watcher\src\DirTree.cc133017413562154651 0
 65D:\GitHub\goit-js-hw-09\node_modules\@parcel\watcher\src\Event.hh133017413653505795 0
-62D:\GitHub\goit-js-hw-09\dist\01-color-switcher.52e3b619.js.map133021076416068256 0
+62D:\GitHub\goit-js-hw-09\dist\01-color-switcher.52e3b619.js.map133021240150546897 0
 62D:\GitHub\goit-js-hw-09\node_modules\@parcel\watcher\src\linux133017413657958794 1
 62D:\GitHub\goit-js-hw-09\node_modules\@parcel\watcher\src\macos133017413656647904 1
 63D:\GitHub\goit-js-hw-09\node_modules\@parcel\watcher\src\shared133017413645100167 1
@@ -4462,7 +4462,7 @@
 70D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\LICENSE133017413423011487 0
 85D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\src\babelErrorUtils.js133017413532995111 0
 76D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\src\config.js133017413618922635 0
-39D:\GitHub\goit-js-hw-09\dist\index.html133021076415217694 0
+39D:\GitHub\goit-js-hw-09\dist\index.html133021240151547507 0
 87D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\src\remapAstLocations.js133017413640587152 0
 75D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\src\types.js133017413644930059 0
 75D:\GitHub\goit-js-hw-09\node_modules\@parcel\transformer-babel\src\utils.js133017413648642539 0
@@ -5117,11 +5117,11 @@
 40D:\GitHub\goit-js-hw-09\js\01-gallery.js133014160987090237 0
 41D:\GitHub\goit-js-hw-09\js\03-feedback.js133014139768617893 0
 43D:\GitHub\goit-js-hw-09\js\gallery-items.js133014139768617893 0
-58D:\GitHub\goit-js-hw-09\dist\01-color-switcher.52e3b619.js133021076415818106 0
-56D:\GitHub\goit-js-hw-09\dist\03-promises.cd58c9ff.js.map133021083117803870 0
-45D:\GitHub\goit-js-hw-09\dist\03-promises.html133021076415247709 0
-54D:\GitHub\goit-js-hw-09\dist\goit-js-hw-09.59712999.js133021076415728035 0
-47D:\GitHub\goit-js-hw-09\dist\index.101ee4ef.css133021076416228363 0
+58D:\GitHub\goit-js-hw-09\dist\01-color-switcher.52e3b619.js133021240149085871 0
+56D:\GitHub\goit-js-hw-09\dist\03-promises.cd58c9ff.js.map133021247234126345 0
+45D:\GitHub\goit-js-hw-09\dist\03-promises.html133021240151557503 0
+54D:\GitHub\goit-js-hw-09\dist\goit-js-hw-09.59712999.js133021240149055856 0
+47D:\GitHub\goit-js-hw-09\dist\index.101ee4ef.css133021240147815011 0
 38D:\GitHub\goit-js-hw-09\css\common.css133014139768587867 0
 56D:\GitHub\goit-js-hw-09\assets\actions-config-step-1.png133014118694248273 0
 47D:\GitHub\goit-js-hw-09\assets\how-it-works.png133014118694358347 0
