@@ -523,6 +523,6 @@ function handleStopButton() {
     buttonStop.disabled = true;
 }
 
-},{}]},["gzrwE","cYUEh"], "cYUEh", "parcelRequire4c75")
+},{}]},["gzrwE","cYUEh"], "cYUEh", "parcelRequire7bc7")
 
 //# sourceMappingURL=01-color-switcher.52e3b619.js.map
