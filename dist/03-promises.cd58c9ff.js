@@ -513,7 +513,7 @@ function createPromise(position, delay) {
             const shouldResolve = Math.random() > 0.3;
             if (shouldResolve) resolve(onSuccess);
             else reject(onError);
-        }, delay);
+        }, delay * position);
     });
 }
 // Функція-колбек (виклик при натісканні submit)
@@ -528,7 +528,6 @@ function onSubmit(event) {
     for(let position = 1; position <= dataForm.amount; position += 1){
         createPromise(position, dataForm.delay).then(onSuccess).catch(onError);
         dataForm.delay += dataForm.step;
-        console.log(dataForm);
     }
 }
 // Функція викликається: для метода catch, коли проміс повертає reject

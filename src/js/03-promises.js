@@ -1,3 +1,4 @@
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // Отримуємо посилання на форму для додавання слухача
 const formRef = document.querySelector('.form');
@@ -11,7 +12,7 @@ function createPromise(position, delay) {
       } else {
         reject(onError)
       }
-    }, delay);
+    }, delay * position);
   });
 };
 // Функція-колбек (виклик при натісканні submit)
@@ -28,7 +29,6 @@ function onSubmit(event) {
   for (let position = 1; position <= dataForm.amount; position += 1) {
     createPromise(position, dataForm.delay).then(onSuccess).catch(onError);
     dataForm.delay += dataForm.step;
-    console.log(dataForm);
   };
 };
 // Функція викликається: для метода catch, коли проміс повертає reject
