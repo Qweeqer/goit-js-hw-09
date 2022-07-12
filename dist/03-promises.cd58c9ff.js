@@ -511,17 +511,22 @@ function createPromise(position, delay) {
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             const shouldResolve = Math.random() > 0.3;
-            if (shouldResolve) resolve(onSuccess);
-            else reject(onError);
+            if (shouldResolve) resolve({
+                position,
+                delay
+            });
+            else reject({
+                position,
+                delay
+            });
         }, delay * position);
     });
 }
 // Функція-колбек (виклик при натісканні submit)
 function onSubmit(event) {
     event.preventDefault();
-    // const form = event.currentTarget;
-    const dataForm = new FormData(formRef);
-    for (const [key, value] of dataForm.entries())dataForm[key] = Number(value);
+    let dataForm = new FormData(formRef);
+    dataForm.forEach((value, key)=>dataForm[key] = Number(value));
     // Очищення форми
     formRef.reset();
     // В циклі for викликаемо функцію яка створює проміс
@@ -539,7 +544,22 @@ function onSuccess({ position , delay  }) {
     (0, _notiflixNotifyAio.Notify).success(`✅ Fulfilled promise ${position} in ${delay}ms`);
 }
 // Додаємо слухача на форму при натисканні submit
-formRef.addEventListener("submit", onSubmit);
+formRef.addEventListener("submit", onSubmit); // ---------------Чернетка-------------
+ // Функція-колбек (виклик при натісканні submit)
+ // function onSubmit(event) {
+ //   event.preventDefault();
+ // const form = event.currentTarget;
+ // for (const [key, value] of dataForm.entries()) {
+ //   dataForm[key] = Number(value);
+ // }
+ // В циклі for викликаемо функцію яка створює проміс
+ // let dataFormElements = []
+ // dataFormElements.map((step, delay, amount) => dataForm.delay += dataForm.step);
+ //   createPromise(step, delay).then(onSuccess).catch(onError);
+ // console.log(dataForm);
+ // console.log("delay",dataForm.delay);
+ // console.log("step", dataForm.step);
+ // console.log("amount", dataForm.amount);
 
 },{"notiflix/build/notiflix-notify-aio":"eXQLZ"}],"eXQLZ":[function(require,module,exports) {
 var global = arguments[3];

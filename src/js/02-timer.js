@@ -39,7 +39,7 @@ const onCountTime = () => {
         const diff = userSelectedTime - new Date().getTime();
         if (diff <= 0) {
             clearTimeout(idInterval);
-            btnStartRef.removeEventListener("click", onCountTime);
+            // btnStartRef.removeEventListener("click", onCountTime);
             // Notify.success('Time is over!')
             return;
         };
