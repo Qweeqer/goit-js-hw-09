@@ -547,15 +547,11 @@ const onCountTime = ()=>{
     }, 1000);
 };
 function addLeadingZero(values) {
-    console.log(values);
     const newValues = {
         ...values
     };
-    console.log(newValues);
     const keys = Object.keys(newValues);
-    console.log(keys);
     for (const key of keys)newValues[key] = String(newValues[key]).padStart(2, 0);
-    console.log(newValues);
     return newValues;
 }
 function onChangeContent({ days , hours , minutes , seconds  }) {
