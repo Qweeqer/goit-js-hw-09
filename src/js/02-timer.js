@@ -40,25 +40,26 @@ const onCountTime = () => {
         const diff = userSelectedTime - new Date().getTime();
         if (diff <= 0) {
             clearTimeout(idInterval);
-            Notify.success('Time is over!')
             btnStartRef.removeEventListener("click", onCountTime);
+            // Notify.success('Time is over!')
             return;
         };
     object = convertMs(diff);
     onChangeContent(addLeadingZero(object));
     }, 1000)
 }
-
 function addLeadingZero(values) {
+    console.log(values);
     const newValues = { ...values };
-    const keys = Object.keys(newValues)
+    console.log(newValues);
+    const keys = Object.keys(newValues);
+    console.log(keys);
     for (const key of keys) {
         newValues[key] = String(newValues[key]).padStart(2, 0)
     } 
+    console.log(newValues);
     return newValues;
 }
-
-
 function onChangeContent({ days, hours, minutes, seconds }) {
     spanDaysRef.textContent = days;
     spanHoursRef.textContent = hours;
