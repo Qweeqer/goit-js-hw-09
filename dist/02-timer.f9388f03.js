@@ -508,6 +508,7 @@ var _flatpickr = require("flatpickr");
 var _flatpickrDefault = parcelHelpers.interopDefault(_flatpickr);
 var _flatpickrMinCss = require("flatpickr/dist/flatpickr.min.css");
 var _notiflixNotifyAio = require("notiflix/build/notiflix-notify-aio");
+const timerInputRef = document.querySelector("#datetime-picker");
 const btnStartRef = document.querySelector("[data-start]");
 const spanDaysRef = document.querySelector("[data-days]");
 const spanHoursRef = document.querySelector("[data-hours]");
@@ -534,6 +535,8 @@ const options = {
 (0, _flatpickrDefault.default)("#datetime-picker", options);
 let object = {};
 const onCountTime = ()=>{
+    btnStartRef.disabled = true;
+    timerInputRef.disabled = true;
     idInterval = setInterval(()=>{
         const diff = userSelectedTime - new Date().getTime();
         if (diff <= 0) {

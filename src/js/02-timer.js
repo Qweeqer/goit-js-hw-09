@@ -2,7 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-
+const timerInputRef = document.querySelector("#datetime-picker");
 const btnStartRef = document.querySelector('[data-start]');
 const spanDaysRef = document.querySelector('[data-days]');
 const spanHoursRef = document.querySelector('[data-hours]');
@@ -13,7 +13,6 @@ let userSelectedTime = null;
 let idInterval = null;
 
 btnStartRef.disabled = true;
-
 const options = {
     enableTime: true,
     time_24hr: true,
@@ -35,6 +34,8 @@ flatpickr("#datetime-picker", options);
 let object = {};
 
 const onCountTime = () => {
+    btnStartRef.disabled = true;
+    timerInputRef.disabled = true;
     idInterval = setInterval(() => {
         const diff = userSelectedTime - new Date().getTime();
         if (diff <= 0) {
