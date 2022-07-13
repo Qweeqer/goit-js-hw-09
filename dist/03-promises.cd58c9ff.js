@@ -519,7 +519,7 @@ function createPromise(position, delay) {
                 position,
                 delay
             });
-        }, delay * position);
+        }, delay);
     });
 }
 // Функція-колбек (виклик при натісканні submit)
